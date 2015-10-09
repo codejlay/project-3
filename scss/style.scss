@@ -1,0 +1,114 @@
+@import"reset";
+@import"fonts";
+@import"variable";
+@import"mixin";
+
+
+html {	
+	margin: 0 auto;
+	font-family: $font-stack;
+    font-size: $font-base;
+	color: $insta-grey;
+}
+
+body {
+    // background-color: green;
+    @include small-screen {
+        background-color: red;
+    }
+
+    @include large-screen {
+        background-color: blue;
+    }
+}
+
+header {
+	text-align: center;	
+}
+
+
+header img {
+	width: 50%;
+	padding: 3%;
+}
+
+
+.search	{
+	background-image: url('../images/pattern.png');
+	text-align: center;
+}
+
+
+.instagrid-icon img {
+	width: 20%;
+	text-align: center;
+	padding: 5% 0;
+}
+
+
+.search-box {
+	padding: 5% 0;
+}
+
+
+.content {
+	/*height: 700px;*/
+    // text-align: center;
+	width: 97%;
+	border: 3px solid $border-grey;
+	margin: 1% 0;
+}
+
+.load button {
+	background-color: #e24420;
+	color: white;
+	border: 2px solid $border-grey;
+	text-transform: uppercase;
+	height: 25px; 
+	width: 150px;
+}
+
+.load {
+	text-align: center;
+}	
+
+footer {
+	text-align: center;
+}
+
+// @media screen and (min-width: $medium-screen) {
+// 	html {
+// 		color: green;
+// 	}	
+  
+// }
+
+
+// @media screen and (min-width: $large-screen) {
+// 	html {
+// 		color: red;
+// 	}
+// }
+
+// @mixin bp($point) {
+  
+//   $medium-screen: "(min-width: 600px)";
+//   $large-screen: "(min-width: 1000px)";
+//     // $bp-papabear: "(max-width: 1600px)";
+
+//   @if $point == large-screen {
+//     @media #{$large-sreen} { body {background-color: green; }
+//   } 
+// }
+//   @else if $point == medium-screen {
+//     @media #{$medium-screen} { body {background-color: red; }
+//   }
+// }
+//   // @else if $point == baby-bear {
+//   //   @media #{$bp-babybear}  { @content; }
+//   // }
+
+// }
+
+
+
