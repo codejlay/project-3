@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Instagrid</title>
-		<link rel="stylesheet" type="reset" href="css/reset.css">
+		<!-- <link rel="stylesheet" type="reset" href="css/reset.css"> -->
 		<link rel="stylesheet" type="style" href="css/style.css">
 	</head>
 	
@@ -16,14 +16,27 @@
 					<img src="images/instagrid-icon.svg" alt="instagrid camera logo">
 				</div>
 
-				<div class="search-box">
+				<!-- <div class="search-box">
 					<input></input>
+				</div> -->
+
+				<div class="hashtag-widget">
+				   <form action="#" id="hashtag-search">
+				      <div class="hashtag-search">
+				         <input type="text" name="hashtag_name" id="hashtag-name" placeholder="Enter your search ..." />
+				         <input type="submit" value="Get Hashtags" />
+				     </div>
+				   </form>
+				   <ul class="hashtag-list"></ul>
 				</div>
+
 			</div>
 
 			<div class="content">
 				<div class="content-in">
-					<img src="images/search-tags.svg" alt="Search Content Image">
+					<!-- <img src="images/search-tags.svg" alt="Search Content Image"> -->
+
+
 				</div>
 			</div>
 			
@@ -32,6 +45,9 @@
 			</div>
 		<footer>
 			<p>&copy; Copyright 2015 INSTAGRID</p>
+			
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+			<script src="js/script.js"></script>
 		</footer>
 	</body>
 </html>

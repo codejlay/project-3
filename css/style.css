@@ -82,7 +82,7 @@ html {
 
 @media (min-width: 600px) {
   body {
-    background-color: red; } }
+    background-color: green; } }
 
 @media (min-width: 1000px) {
   body {
@@ -105,7 +105,8 @@ header img {
   padding: 5% 0; }
 
 .search-box {
-  padding: 5% 0; }
+  padding: 5% 0;
+  display: flex; }
 
 .content {
   /*height: 700px;*/
