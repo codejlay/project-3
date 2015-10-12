@@ -21,7 +21,7 @@ body {
     //     background-color: blue;
     // }
     @include bp(tablet) {
-        background-color: green;
+        background-color: red;
     }
 
     @include bp(desktop) {
@@ -54,11 +54,14 @@ header img {
 }
 
 
-.search-box {
-	padding: 5% 0;
-	display: flex;
-}
+// .search-box {
+// 	padding: 5% 0;
+	
+// }
 
+#hashtag-search form {
+	padding: 5% 0;
+}
 
 .content {
 	/*height: 700px;*/

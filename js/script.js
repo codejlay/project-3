@@ -13,6 +13,7 @@ $(document).ready(function() {
    $('#hashtag-search').on('submit', function(event) {
 
       event.preventDefault();
+      $('.content-in img').css("display", "none");
 
       // reset all the things
       $hashtagList.empty();
