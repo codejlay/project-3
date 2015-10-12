@@ -56,7 +56,7 @@ header img {
 
 .search-box {
 	padding: 5% 0;
-	display: flex;
+	// display: flex;
 }
 
 
@@ -67,6 +67,26 @@ header img {
 	border: 3px solid $border-grey;
 	margin: 1% 0;
 	// display: flex;
+}
+
+.content-in {
+	background-color: pink;
+	flex-direction: column;
+
+}
+
+.hashtag-search {
+	padding-bottom: 10%;
+
+	input {
+		height: 30px;
+		width: 250px;
+	}
+}
+
+.hashtag-list {
+	display: flex;
+	flex-direction: column;
 }
 
 .load button {

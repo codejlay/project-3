@@ -13,6 +13,8 @@ $(document).ready(function() {
    $('#hashtag-search').on('submit', function(event) {
 
       event.preventDefault();
+      $('.content-in img').css("display", "none");
+      
 
       // reset all the things
       $hashtagList.empty();
@@ -34,7 +36,7 @@ $(document).ready(function() {
          if ( hashtagData.length !== 0 ) {
             $.each(hashtagData, function(key, value) {
               hashtagItems += '<li>';
-              hashtagItems += '<img src="' + value.images.standard_resolution.url + '" />';
+              hashtagItems += '<img src="' + value.images.low_resolution.url + '" />';
               hashtagItems += '<img src="' + value.caption.from.profile_picture + '" />'; 
               hashtagItems += '<p>' + value.caption.from.username + '</p>';
               hashtagItems += '<p>' + value.comments.count + '</p>';

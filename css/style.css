@@ -105,14 +105,27 @@ header img {
   padding: 5% 0; }
 
 .search-box {
-  padding: 5% 0;
-  display: flex; }
+  padding: 5% 0; }
 
 .content {
   /*height: 700px;*/
   width: 97%;
   border: 3px solid #c2c2c2;
   margin: 1% 0; }
+
+.content-in {
+  background-color: pink;
+  flex-direction: column; }
+
+.hashtag-search {
+  padding-bottom: 10%; }
+  .hashtag-search input {
+    height: 30px;
+    width: 250px; }
+
+.hashtag-list {
+  display: flex;
+  flex-direction: column; }
 
 .load button {
   background-color: #e24420;
