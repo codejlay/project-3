@@ -70,13 +70,15 @@ header img {
 }
 
 .content-in {
-	background-color: pink;
-	flex-direction: column;
+	// background-color: brown;
+	// flex-direction: column;
+
 
 }
 
 .hashtag-search {
 	padding-bottom: 10%;
+
 
 	input {
 		height: 30px;
@@ -87,6 +89,51 @@ header img {
 .hashtag-list {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	// flex: 1;
+	// margin: 0;
+	// height: 100vh;
+	max-width: 320px;
+	width: 100vh; 
+
+	img {
+		// flex-wrap: wrap;
+		flex-direction: row;
+		// border: solid 2px red;
+	}
+
+	img:first-of-type {
+		
+		// border: solid 2px red;
+		// align-items: right;
+	}
+
+	
+	img:nth-child(2) {
+		width: 10%;
+		border-radius: 50%;
+		
+	}
+
+	p {
+		// flex-direction: row;
+		margin: 0 auto;
+		text-align: right;
+	}
+
+	p:first-of-type {
+		// flex-direction: column;
+		font-size: 2rem;
+		align-items: right;
+		text-align: right;
+		margin-width: 100%;
+		flex-wrap: wrap;
+		font-weight: bold;
+	}
+
+	p:nth-child(4) {
+		color: red;
+	}
 }
 
 .load button {

@@ -7,7 +7,10 @@ $(document).ready(function() {
        hashtagItems,
        hashtagName,
        instagramUrl,
+       // $hashtagProfile = $('.hashtag-list .profile-image'),
+       $hashtagUsername = $('.username'),
        $hashtagList = $('.hashtag-list');
+       
 
    // when the form is submitted
    $('#hashtag-search').on('submit', function(event) {
@@ -47,7 +50,10 @@ $(document).ready(function() {
             hashtagItems += '<p style="margin-top: 18px;">Sorry, hashtag not found.</p>';
          }
 
+         $hashtagUsername.append(hashtagItems);
          $hashtagList.append(hashtagItems);
+         
+         // $(".hashtagList .profile-image").append(hashtagItems);
       })
       // and if it fails...
       .fail(function() {

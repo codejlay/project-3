@@ -113,10 +113,6 @@ header img {
   border: 3px solid #c2c2c2;
   margin: 1% 0; }
 
-.content-in {
-  background-color: pink;
-  flex-direction: column; }
-
 .hashtag-search {
   padding-bottom: 10%; }
   .hashtag-search input {
@@ -125,7 +121,27 @@ header img {
 
 .hashtag-list {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+  width: 100vh; }
+  .hashtag-list img {
+    flex-direction: row; }
+  .hashtag-list img:nth-child(2) {
+    width: 10%;
+    border-radius: 50%; }
+  .hashtag-list p {
+    margin: 0 auto;
+    text-align: right; }
+  .hashtag-list p:first-of-type {
+    font-size: 2rem;
+    align-items: right;
+    text-align: right;
+    margin-width: 100%;
+    flex-wrap: wrap;
+    font-weight: bold; }
+  .hashtag-list p:nth-child(4) {
+    color: red; }
 
 .load button {
   background-color: #e24420;
