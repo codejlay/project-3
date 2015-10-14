@@ -10,28 +10,20 @@ html {
     font-size: $font-base;
 	color: $insta-grey;
 	min-width: 320px;
-	// max-width: 1200px;
+	max-width: 1200px;
 }
 
 body {
-    // background-color: green;
-    // @include small-screen {
-    //     background-color: red;
-    // }
-
-    // @include large-screen {
-    //     background-color: blue;
-    // }
+    
     @include bp(tablet) {
-
-        // background-color: green;
 
     }
 
     @include bp(desktop) {
-        // background-color: blue;
+    
     }
 }
+
 
 header {
 	text-align: center;	
@@ -39,8 +31,7 @@ header {
 	@include bp(tablet) {
 	     text-align: left;
 	     margin-left: 3%;
-
-    }
+	}
 }
 
 
@@ -53,7 +44,7 @@ header img {
 .search	{
 	background-image: url('../images/pattern.png');
 	text-align: center;
-	// display: flex;
+	
 }
 
 
@@ -64,62 +55,40 @@ header img {
 }
 
 
-// .search-box {
-// 	padding: 5% 0;
-	
-// }
-
 #hashtag-search form {
 	padding: 5% 0;
-
 }
+
 
 .content {
-	/*height: 700px;*/
-    text-align: center;
-	// width: 97%;
+	text-align: center;
 	border: 3px solid $border-grey;
 	margin: 1% 5%;
-	// display: flex;
 }
 
-.content-in {
-	// background-color: brown;
-	// flex-direction: column;
-
-
-}
 
 .hashtag-search {
 	padding-bottom: 10%;
 
-
 	input {
 		height: 30px;
 		width: 250px;
+		color: $search-grey;
 	}
 }
 
+
 .hashtag-list {
-	// align-content: flex-start;
+
 	align-items: center;
-	// flex-wrap: wrap;
 	display: flex;
-	// flex: 1 1 33%;
 	flex-direction: column;
-	// margin: 50%;
-	// background-color: brown;
-	// width: 90%;
 	padding: 5%;
 
 	@include bp(tablet) {
-        // flex-flow: row wrap;
-        flex-direction: row;
+    	flex-direction: row;
         flex-wrap: wrap;
-        // flex: 1;
-        // width: 600px;
     }
-
 }
 
 
@@ -129,22 +98,11 @@ header img {
 
 
 .wrapper {
-	// border: solid 1px red;
-	// display: flex;
-	// flex-direction: column;
-	// align-items: center;
-	// justify-content:space-between;
-	// flex-wrap: wrap;
-	// align-content: flex-start;
-	// display: inline-flex;
-
+	
 	@include bp(tablet) {
-        // width: 33%;
-        flex:calc(33.33% - 20px);
+    	flex:calc(33.33% - 20px);
         margin: 10px;
-        // flex: 1;
-        // border: solid 1px red;
-    }
+  	}
 
      @include bp(desktop) {
      	flex:calc(25% - 20px);
@@ -156,9 +114,7 @@ header img {
 .profile {
 	display: flex;
 	justify-content: space-between;
-	border-left: solid  1px $border-grey;
-	border-right: solid  1px $border-grey;
-	border-bottom: solid  1px $border-grey;
+	border: solid  1px $search-grey;
 	padding: 5%;
 }
 
@@ -174,13 +130,6 @@ header img {
 
 .wrapper1 img {
 	max-width: 100%
-}
-
-
-.wrapper2 {
-	// display: flex;
-
-	// justify-content:space-between;
 }
 
 
