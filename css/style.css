@@ -114,8 +114,17 @@ header img {
   padding-bottom: 10%; }
   .hashtag-search input {
     height: 30px;
-    width: 250px;
-    color: #dbdbdb; }
+    width: 200px;
+    color: #dbdbdb;
+    margin: 0 0 0 -40px; }
+  .hashtag-search button {
+    height: 30px;
+    width: 30px;
+    color: #dbdbdb;
+    background-color: white;
+    border: none;
+    margin: -40px;
+    text-align: center; }
 
 .hashtag-list {
   -webkit-align-items: center;

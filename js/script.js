@@ -1,6 +1,4 @@
-
-
-$(document).ready(function() {
+$(function() {
 
    var hashtagData,
        hashtagItems,
@@ -13,6 +11,7 @@ $(document).ready(function() {
 
       event.preventDefault();
       $('.content-in img').css("display", "none");
+      $('#dvloader').show();
 
       $hashtagList.empty();
       hashtagData, hashtagItems = '',
@@ -29,12 +28,13 @@ $(document).ready(function() {
       .done(function(results) {
          hashtagData = results.data;
 
+
          if ( hashtagData.length !== 0 ) {
             $.each(hashtagData, function(key, value) {
               hashtagItems += '<li class="wrapper">';
               hashtagItems += '<ul>';
               hashtagItems += '<li class="hashtag-image">';
-              hashtagItems += '<img src="' + value.images.low_resolution.url + '" />';
+              hashtagItems += '<a href="' + value.images.standard_resolution.url + '" data-lightbox="image-1"> <img src="' + value.images.standard_resolution.url + '" /></a>'; 
               hashtagItems += '</li>';
               hashtagItems += '<li class="profile">';
               hashtagItems += '<div class="wrapper1">';
@@ -61,6 +61,10 @@ $(document).ready(function() {
 
       .fail(function() {
          $hashtagList.append('<li>Sorry! There was a problem, please try again.</li>');
+      })
+
+      .always(function() {
+        $('#dvloader').hide();
       });
    });
 });
