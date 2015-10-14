@@ -7,7 +7,6 @@ $(document).ready(function() {
        hashtagItems,
        hashtagName,
        instagramUrl,
-       // $hashtagProfile = $('.hashtag-list .profile-image'),
        $hashtagUsername = $('.username'),
        $hashtagList = $('.hashtag-list');
        
@@ -38,12 +37,23 @@ $(document).ready(function() {
 
          if ( hashtagData.length !== 0 ) {
             $.each(hashtagData, function(key, value) {
-              hashtagItems += '<li>';
+              hashtagItems += '<li class="wrapper">';
+              hashtagItems += '<ul>';
+              hashtagItems += '<li class="hashtag-image">';
               hashtagItems += '<img src="' + value.images.low_resolution.url + '" />';
-              hashtagItems += '<img src="' + value.caption.from.profile_picture + '" />'; 
-              hashtagItems += '<p>' + value.caption.from.username + '</p>';
-              hashtagItems += '<p>' + value.comments.count + '</p>';
-              hashtagItems += '<p>' + value.likes.count + '</p>';
+              hashtagItems += '</li>';
+              hashtagItems += '<li class="profile">';
+              hashtagItems += '<div class="wrapper1">';
+              hashtagItems += '<img src="' + value.caption.from.profile_picture + '" />';
+              hashtagItems += '</div>';
+              hashtagItems += '<div class="wrapper2">'; 
+              hashtagItems += '<h1>' + value.caption.from.username + '</h1>';
+              hashtagItems += '<div class="comments">';
+              hashtagItems += '<i class="fa fa-comments"></i>' + ' ' + value.comments.count + ' ' +'<i class="fa fa-heart"></i>' + ' ' + value.likes.count + ' '; 
+              hashtagItems += '</div>';
+              hashtagItems += '</div>';
+              hashtagItems += '</li>';
+              hashtagItems += '</ul>';
               hashtagItems += '</li>';
             });
          } else {
@@ -52,8 +62,7 @@ $(document).ready(function() {
 
          $hashtagUsername.append(hashtagItems);
          $hashtagList.append(hashtagItems);
-         
-         // $(".hashtagList .profile-image").append(hashtagItems);
+               
       })
       // and if it fails...
       .fail(function() {

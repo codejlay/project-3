@@ -9,6 +9,8 @@ html {
 	font-family: $font-stack;
     font-size: $font-base;
 	color: $insta-grey;
+	min-width: 320px;
+	max-width: 1200px;
 }
 
 body {
@@ -21,16 +23,22 @@ body {
     //     background-color: blue;
     // }
     @include bp(tablet) {
-        background-color: green;
+        // background-color: green;
     }
 
     @include bp(desktop) {
-        background-color: blue;
+        // background-color: blue;
     }
 }
 
 header {
 	text-align: center;	
+
+	@include bp(tablet) {
+	     text-align: left;
+	     margin-left: 3%;
+
+    }
 }
 
 
@@ -62,10 +70,10 @@ header img {
 
 .content {
 	/*height: 700px;*/
-    // text-align: center;
-	width: 97%;
+    text-align: center;
+	// width: 97%;
 	border: 3px solid $border-grey;
-	margin: 1% 0;
+	margin: 1% 5%;
 	// display: flex;
 }
 
@@ -87,54 +95,109 @@ header img {
 }
 
 .hashtag-list {
-	display: flex;
-	flex-direction: column;
+	// align-content: flex-start;
 	align-items: center;
-	// flex: 1;
-	// margin: 0;
-	// height: 100vh;
-	max-width: 320px;
-	width: 100vh; 
+	// flex-wrap: wrap;
+	display: flex;
+	// flex: 1 1 33%;
+	flex-direction: column;
+	// margin: 50%;
+	// background-color: brown;
+	// width: 90%;
+	padding: 5%;
 
-	img {
-		// flex-wrap: wrap;
-		flex-direction: row;
-		// border: solid 2px red;
-	}
+	@include bp(tablet) {
+        // flex-flow: row wrap;
+        flex-direction: row;
+        flex-wrap: wrap;
+        // flex: 1;
+        // width: 600px;
+    }
 
-	img:first-of-type {
-		
-		// border: solid 2px red;
-		// align-items: right;
-	}
-
-	
-	img:nth-child(2) {
-		width: 10%;
-		border-radius: 50%;
-		
-	}
-
-	p {
-		// flex-direction: row;
-		margin: 0 auto;
-		text-align: right;
-	}
-
-	p:first-of-type {
-		// flex-direction: column;
-		font-size: 2rem;
-		align-items: right;
-		text-align: right;
-		margin-width: 100%;
-		flex-wrap: wrap;
-		font-weight: bold;
-	}
-
-	p:nth-child(4) {
-		color: red;
-	}
 }
+
+
+.hashtag-image {
+	padding-top: 5%;	
+}
+
+
+.wrapper {
+	// border: solid 1px red;
+	// display: flex;
+	// flex-direction: column;
+	// align-items: center;
+	// justify-content:space-between;
+	// flex-wrap: wrap;
+	// align-content: flex-start;
+	// display: inline-flex;
+
+	@include bp(tablet) {
+        // width: 33%;
+        flex:calc(33.33% - 20px);
+        margin: 10px;
+        // flex: 1;
+        // border: solid 1px red;
+    }
+
+     @include bp(desktop) {
+     	flex:calc(25% - 20px);
+        margin: 10px;
+    }
+}
+
+
+.profile {
+	display: flex;
+	justify-content: space-between;
+	border-left: solid  1px $border-grey;
+	border-right: solid  1px $border-grey;
+	border-bottom: solid  1px $border-grey;
+	padding: 5%;
+}
+
+
+.wrapper1 {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	overflow: hidden;
+	background-size: cover;
+}
+
+
+.wrapper1 img {
+	max-width: 100%
+}
+
+
+.wrapper2 {
+	// display: flex;
+
+	// justify-content:space-between;
+}
+
+
+.hashtag-image img {
+	max-width: 100%;	
+}
+
+
+h1 {
+	font-size: 2rem;
+	font-weight: bold;
+
+	@include bp(tablet) {
+     font-size: 1rem;
+    }
+}
+
+
+.comments {
+	text-align: right;
+	padding: 5% 0;
+}
+
 
 .load button {
 	background-color: #e24420;
@@ -145,47 +208,16 @@ header img {
 	width: 150px;
 }
 
+
 .load {
 	text-align: center;
+	padding:  5% 0;
 }	
+
 
 footer {
 	text-align: center;
+	padding: 5% 0;
+	border-top: solid 1px $border-grey;
+	margin: 0 5%;
 }
-
-// @media screen and (min-width: $medium-screen) {
-// 	html {
-// 		color: green;
-// 	}	
-  
-// }
-
-
-// @media screen and (min-width: $large-screen) {
-// 	html {
-// 		color: red;
-// 	}
-// }
-
-// @mixin bp($point) {
-  
-//   $medium-screen: "(min-width: 600px)";
-//   $large-screen: "(min-width: 1000px)";
-//     // $bp-papabear: "(max-width: 1600px)";
-
-//   @if $point == large-screen {
-//     @media #{$large-sreen} { body {background-color: green; }
-//   } 
-// }
-//   @else if $point == medium-screen {
-//     @media #{$medium-screen} { body {background-color: red; }
-//   }
-// }
-//   // @else if $point == baby-bear {
-//   //   @media #{$bp-babybear}  { @content; }
-//   // }
-
-// }
-
-
-

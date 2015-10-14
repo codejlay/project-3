@@ -78,18 +78,16 @@ html {
   margin: 0 auto;
   font-family: "open_sans", Helvetica, sans-serif;
   font-size: 12px;
-  color: #2e2e2e; }
-
-@media (min-width: 600px) {
-  body {
-    background-color: green; } }
-
-@media (min-width: 1000px) {
-  body {
-    background-color: blue; } }
+  color: #2e2e2e;
+  min-width: 320px;
+  max-width: 1200px; }
 
 header {
   text-align: center; }
+  @media (min-width: 600px) {
+    header {
+      text-align: left;
+      margin-left: 3%; } }
 
 header img {
   width: 50%;
@@ -109,9 +107,9 @@ header img {
 
 .content {
   /*height: 700px;*/
-  width: 97%;
+  text-align: center;
   border: 3px solid #c2c2c2;
-  margin: 1% 0; }
+  margin: 1% 5%; }
 
 .hashtag-search {
   padding-bottom: 10%; }
@@ -120,28 +118,59 @@ header img {
     width: 250px; }
 
 .hashtag-list {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 320px;
-  width: 100vh; }
-  .hashtag-list img {
-    flex-direction: row; }
-  .hashtag-list img:nth-child(2) {
-    width: 10%;
-    border-radius: 50%; }
-  .hashtag-list p {
-    margin: 0 auto;
-    text-align: right; }
-  .hashtag-list p:first-of-type {
-    font-size: 2rem;
-    align-items: right;
-    text-align: right;
-    margin-width: 100%;
-    flex-wrap: wrap;
-    font-weight: bold; }
-  .hashtag-list p:nth-child(4) {
-    color: red; }
+  padding: 5%; }
+  @media (min-width: 600px) {
+    .hashtag-list {
+      flex-direction: row;
+      flex-wrap: wrap; } }
+
+.hashtag-image {
+  padding-top: 5%; }
+
+@media (min-width: 600px) {
+  .wrapper {
+    flex: calc(33.33% - 20px);
+    margin: 10px; } }
+
+@media (min-width: 1000px) {
+  .wrapper {
+    flex: calc(25% - 20px);
+    margin: 10px; } }
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  border-left: solid 1px #c2c2c2;
+  border-right: solid 1px #c2c2c2;
+  border-bottom: solid 1px #c2c2c2;
+  padding: 5%; }
+
+.wrapper1 {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-size: cover; }
+
+.wrapper1 img {
+  max-width: 100%; }
+
+.hashtag-image img {
+  max-width: 100%; }
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold; }
+  @media (min-width: 600px) {
+    h1 {
+      font-size: 1rem; } }
+
+.comments {
+  text-align: right;
+  padding: 5% 0; }
 
 .load button {
   background-color: #e24420;
@@ -152,7 +181,11 @@ header img {
   width: 150px; }
 
 .load {
-  text-align: center; }
+  text-align: center;
+  padding: 5% 0; }
 
 footer {
-  text-align: center; }
+  text-align: center;
+  padding: 5% 0;
+  border-top: solid 1px #c2c2c2;
+  margin: 0 5%; }
