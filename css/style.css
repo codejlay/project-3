@@ -108,7 +108,8 @@ header img {
 .content {
   text-align: center;
   border: 3px solid #c2c2c2;
-  margin: 1% 5%; }
+  margin: 1% 5%;
+  list-style-type: none; }
 
 .hashtag-search {
   padding-bottom: 10%; }
