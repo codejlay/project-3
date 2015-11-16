@@ -4,14 +4,11 @@
 	<meta charset="utf-8">
 	<title>Instagrid</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href="css/lightbox.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body ng-app="project3" ng-controller="InstaCtrl">
 	<header>
-
-
 		<img src="images/instagrid-logo.svg" alt="instagrid main logo">
 	</header>
 	<div class="search">
@@ -40,22 +37,25 @@
 						<a href="{{post.images.standard_resolution.url}}" data-lightbox="image-1"> <img ng-src="{{post.images.standard_resolution.url}}" /></a>
 						
 						<div class="profile">
+
 							<div class="wrapper1">
 								<img ng-src="{{post.user.profile_picture}}"/>
 							</div>
+
 							<div class="wrapper2">
 								<h1>{{post.user.username}}</h1>
 								<div class="comments">
 									{{post.comments.count}}<i class="fa fa-comments"></i>' {{post.likes.count}}'<i class="fa fa-heart"></i>
 								</div>
 							</div>
+			
 						</div>
 					</li>
 				</ul>
 			</li>
 
 
-		</ul>
+		
 	</div>
 
 </div>
