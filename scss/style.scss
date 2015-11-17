@@ -31,8 +31,16 @@ header {
 
 
 header img {
-	width: 45%;
-	padding: 1rem;
+	max-width: 150px;
+	margin: 1rem;
+
+	@include bp(tablet) {
+		max-width: 200px;
+	}
+
+	@include bp(desktop) {
+		max-width: 250px;
+    }
 }
 
 
@@ -52,28 +60,21 @@ header img {
 }
 
 
-#hashtag-search form {
-	padding: 5% 0;
-}
-
-
-// Search Results
-
-.content {
-	text-align: center;
-	border: 3px solid $border-grey;
-	margin: 20% 5%;
-}
+// #hashtag-search form {
+// 	padding: 5% 0;
+// }
 
 
 .hashtag-search {
-	padding-bottom: 10%;
-	padding-top: 3rem;
+	padding-bottom: 2rem;
+	padding-top: 2rem;
 
 	input {
 		height: 2.5rem;
-		width: 20rem;
+		width: 18rem;
 		margin: 0 0 0 -40px;
+		padding-left: 1.5rem;
+		font-size: 1.2rem;
 	}
 
 	button {
@@ -93,6 +94,15 @@ header img {
 }
 
 
+// Search Results
+
+.content {
+	text-align: center;
+	border: 3px solid $border-grey;
+	margin: 5% 2.5%;
+}
+
+
 .hashtag-list {
 	align-items: center;
 	display: flex;
@@ -102,19 +112,27 @@ header img {
 	@include bp(tablet) {
     	flex-direction: row;
         flex-wrap: wrap;
+        padding: 1%;
     }
 }
 
 
 .hashtag-image {
 	padding-top: 5%;	
+	// border: solid  1px $search-grey;
 	img {
-	border: solid  1px $search-grey;
+		border: solid  1px $search-grey;
+		// max-width: 100%;
 	}
 }	
 
 
 .wrapper {
+
+	// ul {
+	// 	border: solid  1px $search-grey;	
+	// 	background-color: red;
+	// }
 	
 	@include bp(tablet) {
     	flex:calc(33.33% - 20px);
@@ -139,26 +157,37 @@ header img {
 
 
 .wrapper1 {
-	height: 50px;
-	width: 50px;
-	border-radius: 50%;
+	width: 33%;
+	text-align: left;
 	overflow: hidden;
 	background-size: cover;
+
+	img {
+		height: 50px;
+		max-width: 50px;
+		border-radius: 50%;
+	}
 }
 
 
 .wrapper2 {
-	p {
-	font-size: 1.2rem;
-	font-weight: bold;
-	margin-top: .333rem;
-	line-height: 1.5;
-	overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+	width: 67%;
+	text-align: right;
+
+	p:first-child {
+		font-size: 1.2rem;
+		font-weight: bold;
+		line-height: 1.5;
+		overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
 
 		@include bp(tablet) {
-	     font-size: 1rem;
+	     	font-size: 1.4rem;
+	    }
+
+	    @include bp(tablet) {
+	     	font-size: 1.5rem;
 	    }
 	}
 }
@@ -176,8 +205,21 @@ header img {
 
 .comments {
 	text-align: right;
-	padding: 5% 0;
+	// padding: 5% 0;
+	font-size: 1rem;
 	font-weight: bold;
+
+	@include bp(tablet) {
+	     	font-size: 1.2rem;
+	    }
+
+    @include bp(tablet) {
+     	font-size: 1.3rem;
+    }
+
+	i {
+		padding-left: .5rem;
+	}
 }
 
 

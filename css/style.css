@@ -102,8 +102,14 @@ header {
       margin-left: 3%; } }
 
 header img {
-  width: 45%;
-  padding: 1rem; }
+  max-width: 150px;
+  margin: 1rem; }
+  @media (min-width: 600px) {
+    header img {
+      max-width: 200px; } }
+  @media (min-width: 1000px) {
+    header img {
+      max-width: 250px; } }
 
 .search {
   background-image: url("../images/pattern.png");
@@ -115,21 +121,15 @@ header img {
   text-align: center;
   padding: 5% 0; }
 
-#hashtag-search form {
-  padding: 5% 0; }
-
-.content {
-  text-align: center;
-  border: 3px solid #c2c2c2;
-  margin: 20% 5%; }
-
 .hashtag-search {
-  padding-bottom: 10%;
-  padding-top: 3rem; }
+  padding-bottom: 2rem;
+  padding-top: 2rem; }
   .hashtag-search input {
     height: 2.5rem;
-    width: 20rem;
-    margin: 0 0 0 -40px; }
+    width: 18rem;
+    margin: 0 0 0 -40px;
+    padding-left: 1.5rem;
+    font-size: 1.2rem; }
   .hashtag-search button {
     height: 2.5rem;
     width: 2.5rem;
@@ -142,6 +142,11 @@ header img {
     cursor: pointer; }
     .hashtag-search button i:hover {
       color: #e24420; }
+
+.content {
+  text-align: center;
+  border: 3px solid #c2c2c2;
+  margin: 5% 2.5%; }
 
 .hashtag-list {
   -webkit-align-items: center;
@@ -161,7 +166,8 @@ header img {
       flex-direction: row;
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-      flex-wrap: wrap; } }
+      flex-wrap: wrap;
+      padding: 1%; } }
 
 .hashtag-image {
   padding-top: 5%; }
@@ -195,23 +201,31 @@ header img {
   padding: 5%; }
 
 .wrapper1 {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
+  width: 33%;
+  text-align: left;
   overflow: hidden;
   background-size: cover; }
+  .wrapper1 img {
+    height: 50px;
+    max-width: 50px;
+    border-radius: 50%; }
 
-.wrapper2 p {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-top: .333rem;
-  line-height: 1.5;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap; }
-  @media (min-width: 600px) {
-    .wrapper2 p {
-      font-size: 1rem; } }
+.wrapper2 {
+  width: 67%;
+  text-align: right; }
+  .wrapper2 p:first-child {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+    @media (min-width: 600px) {
+      .wrapper2 p:first-child {
+        font-size: 1.4rem; } }
+    @media (min-width: 600px) {
+      .wrapper2 p:first-child {
+        font-size: 1.5rem; } }
 
 .wrapper1 img {
   max-width: 100%; }
@@ -221,8 +235,16 @@ header img {
 
 .comments {
   text-align: right;
-  padding: 5% 0;
+  font-size: 1rem;
   font-weight: bold; }
+  @media (min-width: 600px) {
+    .comments {
+      font-size: 1.2rem; } }
+  @media (min-width: 600px) {
+    .comments {
+      font-size: 1.3rem; } }
+  .comments i {
+    padding-left: .5rem; }
 
 footer {
   text-align: center;
