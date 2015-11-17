@@ -28,26 +28,23 @@ $(function() {
       .done(function(results) {
          hashtagData = results.data;
 
-
          if ( hashtagData.length !== 0 ) {
             $.each(hashtagData, function(key, value) {
               hashtagItems += '<li class="wrapper">';
-              hashtagItems += '<ul>';
-              hashtagItems += '<li class="hashtag-image">';
+              hashtagItems += '<div class="hashtag-image">';
               hashtagItems += '<a href="' + value.images.standard_resolution.url + '" data-lightbox="image-1"> <img src="' + value.images.standard_resolution.url + '" /></a>'; 
-              hashtagItems += '</li>';
-              hashtagItems += '<li class="profile">';
-              hashtagItems += '<div class="wrapper1">';
+              hashtagItems += '</div>';
+              hashtagItems += '<div class="profile">';
+              hashtagItems += '<div class="picture-wrapper">';
               hashtagItems += '<img src="' + value.caption.from.profile_picture + '" />';
               hashtagItems += '</div>';
-              hashtagItems += '<div class="wrapper2">'; 
+              hashtagItems += '<div class="desc-wrapper">'; 
               hashtagItems += '<p>' + value.caption.from.username + '</p>';
               hashtagItems += '<div class="comments">';
               hashtagItems += '<i class="fa fa-comments"></i>' + ' ' + value.comments.count + ' ' +'<i class="fa fa-heart"></i>' + ' ' + value.likes.count + ' '; 
               hashtagItems += '</div>';
               hashtagItems += '</div>';
-              hashtagItems += '</li>';
-              hashtagItems += '</ul>';
+              hashtagItems += '</div>';
               hashtagItems += '</li>';
             });
          } else {

@@ -6,7 +6,6 @@
   
   $bp-tablet: "(min-width: #{$small-screen} )";
   $bp-desktop: "(min-width: #{$large-screen})";
-  
 
   @if $point == desktop {
     @media #{$bp-desktop} { @content; }

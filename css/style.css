@@ -82,6 +82,9 @@ table {
 /*-----------------------------------------*/
 /* Mixins */
 /*-----------------------------------------*/
+* {
+  box-sizing: border-box; }
+
 img {
   height: auto;
   max-width: 100%; }
@@ -131,8 +134,8 @@ header img {
     padding-left: 1.5rem;
     font-size: 1.2rem; }
   .hashtag-search button {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 2rem;
+    width: 2rem;
     font-size: 1.5rem;
     color: #dbdbdb;
     background-color: white;
@@ -200,20 +203,20 @@ header img {
   border-left: solid 1px #dbdbdb;
   padding: 5%; }
 
-.wrapper1 {
+.picture-wrapper {
   width: 33%;
   text-align: left;
   overflow: hidden;
   background-size: cover; }
-  .wrapper1 img {
+  .picture-wrapper img {
     height: 50px;
     max-width: 50px;
     border-radius: 50%; }
 
-.wrapper2 {
+.desc-wrapper {
   width: 67%;
   text-align: right; }
-  .wrapper2 p:first-child {
+  .desc-wrapper p:first-child {
     font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.5;
@@ -221,10 +224,10 @@ header img {
     text-overflow: ellipsis;
     white-space: nowrap; }
     @media (min-width: 600px) {
-      .wrapper2 p:first-child {
+      .desc-wrapper p:first-child {
         font-size: 1.4rem; } }
     @media (min-width: 600px) {
-      .wrapper2 p:first-child {
+      .desc-wrapper p:first-child {
         font-size: 1.5rem; } }
 
 .wrapper1 img {
@@ -245,6 +248,18 @@ header img {
       font-size: 1.3rem; } }
   .comments i {
     padding-left: .5rem; }
+
+.load {
+  text-align: center;
+  padding: 5% 0; }
+
+.load button {
+  background-color: #e24420;
+  color: white;
+  border: 2px solid #c2c2c2;
+  text-transform: uppercase;
+  height: 25px;
+  width: 150px; }
 
 footer {
   text-align: center;

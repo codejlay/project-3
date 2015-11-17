@@ -3,6 +3,10 @@
 @import"variable";
 @import"mixin";
 
+* {
+  box-sizing: border-box; 
+}
+
 
 img {
   height: auto;
@@ -60,11 +64,6 @@ header img {
 }
 
 
-// #hashtag-search form {
-// 	padding: 5% 0;
-// }
-
-
 .hashtag-search {
 	padding-bottom: 2rem;
 	padding-top: 2rem;
@@ -78,8 +77,8 @@ header img {
 	}
 
 	button {
-		height: 2.5rem;
-		width: 2.5rem;
+		height: 2rem;
+		width: 2rem;
 		font-size: 1.5rem;
 		color: $search-grey;
 		background-color: white;
@@ -119,21 +118,13 @@ header img {
 
 .hashtag-image {
 	padding-top: 5%;	
-	// border: solid  1px $search-grey;
 	img {
 		border: solid  1px $search-grey;
-		// max-width: 100%;
 	}
 }	
 
 
 .wrapper {
-
-	// ul {
-	// 	border: solid  1px $search-grey;	
-	// 	background-color: red;
-	// }
-	
 	@include bp(tablet) {
     	flex:calc(33.33% - 20px);
         margin: 10px;
@@ -156,7 +147,7 @@ header img {
 }
 
 
-.wrapper1 {
+.picture-wrapper {
 	width: 33%;
 	text-align: left;
 	overflow: hidden;
@@ -170,7 +161,7 @@ header img {
 }
 
 
-.wrapper2 {
+.desc-wrapper {
 	width: 67%;
 	text-align: right;
 
@@ -225,20 +216,20 @@ header img {
 
 // Load
 
-// .load button {
-// 	background-color: #e24420;
-// 	color: white;
-// 	border: 2px solid $border-grey;
-// 	text-transform: uppercase;
-// 	height: 25px; 
-// 	width: 150px;
-// }
+.load {
+	text-align: center;
+	padding:  5% 0;
+}
 
 
-// .load {
-// 	text-align: center;
-// 	padding:  5% 0;
-// }	
+.load button {
+	background-color: #e24420;
+	color: white;
+	border: 2px solid $border-grey;
+	text-transform: uppercase;
+	height: 25px; 
+	width: 150px;
+}
 
 
 footer {
