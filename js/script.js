@@ -41,7 +41,7 @@ $(function() {
               hashtagItems += '<img src="' + value.caption.from.profile_picture + '" />';
               hashtagItems += '</div>';
               hashtagItems += '<div class="wrapper2">'; 
-              hashtagItems += '<h1>' + value.caption.from.username + '</h1>';
+              hashtagItems += '<p>' + value.caption.from.username + '</p>';
               hashtagItems += '<div class="comments">';
               hashtagItems += '<i class="fa fa-comments"></i>' + ' ' + value.comments.count + ' ' +'<i class="fa fa-heart"></i>' + ' ' + value.likes.count + ' '; 
               hashtagItems += '</div>';

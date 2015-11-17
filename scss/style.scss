@@ -4,6 +4,10 @@
 @import"mixin";
 
 
+img {
+  height: auto;
+  max-width: 100%; }
+
 html {	
 	margin: 0 auto;
 	font-family: $font-stack;
@@ -13,6 +17,8 @@ html {
 	max-width: 1200px;
 }
 
+
+// Header
 
 header {
 	text-align: center;	
@@ -25,20 +31,22 @@ header {
 
 
 header img {
-	width: 50%;
-	padding: 3%;
+	width: 45%;
+	padding: 1rem;
 }
 
+
+// Search Area
 
 .search	{
 	background-image: url('../images/pattern.png');
 	text-align: center;
-	
+	padding: 3rem 0;
 }
 
 
 .instagrid-icon img {
-	width: 20%;
+	max-width: 150px;
 	text-align: center;
 	padding: 5% 0;
 }
@@ -49,37 +57,43 @@ header img {
 }
 
 
+// Search Results
+
 .content {
 	text-align: center;
 	border: 3px solid $border-grey;
-	margin: 1% 5%;
+	margin: 20% 5%;
 }
 
 
 .hashtag-search {
 	padding-bottom: 10%;
-		
+	padding-top: 3rem;
+
 	input {
-		height: 30px;
-		width: 200px;
-		color: $search-grey;
+		height: 2.5rem;
+		width: 20rem;
 		margin: 0 0 0 -40px;
 	}
 
 	button {
-		height: 30px;
-		width: 30px;
+		height: 2.5rem;
+		width: 2.5rem;
+		font-size: 1.5rem;
 		color: $search-grey;
 		background-color: white;
 		border: none;
-		margin: -40px;
+		margin: -3rem;
 		text-align: center;
-	}	
+		cursor: pointer;
+		i:hover {
+			color: $red-theme;
+		}
+	}
 }
 
 
 .hashtag-list {
-
 	align-items: center;
 	display: flex;
 	flex-direction: column;
@@ -94,7 +108,10 @@ header img {
 
 .hashtag-image {
 	padding-top: 5%;	
-}
+	img {
+	border: solid  1px $search-grey;
+	}
+}	
 
 
 .wrapper {
@@ -104,7 +121,7 @@ header img {
         margin: 10px;
   	}
 
-     @include bp(desktop) {
+    @include bp(desktop) {
      	flex:calc(25% - 20px);
         margin: 10px;
     }
@@ -114,7 +131,9 @@ header img {
 .profile {
 	display: flex;
 	justify-content: space-between;
-	border: solid  1px $search-grey;
+	border-bottom: solid  1px $search-grey;
+	border-right: solid  1px $search-grey;
+	border-left: solid  1px $search-grey;
 	padding: 5%;
 }
 
@@ -128,6 +147,23 @@ header img {
 }
 
 
+.wrapper2 {
+	p {
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-top: .333rem;
+	line-height: 1.5;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+		@include bp(tablet) {
+	     font-size: 1rem;
+	    }
+	}
+}
+
+
 .wrapper1 img {
 	max-width: 100%
 }
@@ -138,36 +174,29 @@ header img {
 }
 
 
-h1 {
-	font-size: 2rem;
-	font-weight: bold;
-
-	@include bp(tablet) {
-     font-size: 1rem;
-    }
-}
-
-
 .comments {
 	text-align: right;
 	padding: 5% 0;
+	font-weight: bold;
 }
 
 
-.load button {
-	background-color: #e24420;
-	color: white;
-	border: 2px solid $border-grey;
-	text-transform: uppercase;
-	height: 25px; 
-	width: 150px;
-}
+// Load
+
+// .load button {
+// 	background-color: #e24420;
+// 	color: white;
+// 	border: 2px solid $border-grey;
+// 	text-transform: uppercase;
+// 	height: 25px; 
+// 	width: 150px;
+// }
 
 
-.load {
-	text-align: center;
-	padding:  5% 0;
-}	
+// .load {
+// 	text-align: center;
+// 	padding:  5% 0;
+// }	
 
 
 footer {
@@ -175,4 +204,9 @@ footer {
 	padding: 5% 0;
 	border-top: solid 1px $border-grey;
 	margin: 0 5%;
+
+	p {
+		color: $border-grey;
+		font-weight: normal;
+	}
 }

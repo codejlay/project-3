@@ -1,12 +1,6 @@
-// @mixin small-screen {
-//     @media(min-width: #{$small-screen}) { @content; }
-
-// }
-
-// @mixin large-screen {
-//     @media(min-width: #{$large-screen}) { @content; }
-
-// }
+/*-----------------------------------------*/
+/* Mixins */
+/*-----------------------------------------*/
 
 @mixin bp($point) {
   
