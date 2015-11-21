@@ -15,15 +15,12 @@ gulp.task('scss', function () {
     .pipe(gulp.dest('./css'));
 });
 
-
-
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
             baseDir: "./"
         }
     });
-
 
     gulp.watch('./scss/**/*.scss', ['scss']);
     gulp.watch(["index.html", "js/*.js", "css/*.css"]).on('change', browserSync.reload);
