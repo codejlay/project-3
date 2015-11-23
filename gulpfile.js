@@ -1,6 +1,6 @@
 'use strict';
 
-var gulp = require('gulp'); // Load Gulp!
+var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');

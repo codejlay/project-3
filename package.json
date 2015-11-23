@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
+    "browser-sync": "^2.10.0",
     "gulp-sass": "^2.0.4",
     "gulp-autoprefixer": "^3.0.2"
   },
@@ -13,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codejlay/project-3.git"
+    "url": "git+https://github.com/codejlay/project03-instagrid.git"
   },
   "author": "JLay",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/codejlay/project-3/issues"
+    "url": "https://github.com/codejlay/project03-instagrid/issues"
   },
-  "homepage": "https://github.com/codejlay/project-3#readme"
+  "homepage": "https://github.com/codejlay/project03-instagrid#readme"
 }
