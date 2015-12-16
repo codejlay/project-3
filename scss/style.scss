@@ -10,7 +10,9 @@
 
 img {
   height: auto;
-  max-width: 100%; }
+  max-width: 100%; 
+}
+
 
 html {	
 	margin: 0 auto;
@@ -86,6 +88,7 @@ header img {
 		margin: -3rem;
 		text-align: center;
 		cursor: pointer;
+
 		i:hover {
 			color: $red-theme;
 		}
@@ -118,6 +121,7 @@ header img {
 
 .hashtag-image {
 	padding-top: 5%;	
+
 	img {
 		border: solid  1px $search-grey;
 	}
@@ -196,13 +200,12 @@ header img {
 
 .comments {
 	text-align: right;
-	// padding: 5% 0;
 	font-size: 1rem;
 	font-weight: bold;
 
 	@include bp(tablet) {
 	     	font-size: 1.2rem;
-	    }
+	}
 
     @include bp(tablet) {
      	font-size: 1.3rem;
@@ -211,24 +214,6 @@ header img {
 	i {
 		padding-left: .5rem;
 	}
-}
-
-
-// Load
-
-.load {
-	text-align: center;
-	padding:  5% 0;
-}
-
-
-.load button {
-	background-color: #e24420;
-	color: white;
-	border: 2px solid $border-grey;
-	text-transform: uppercase;
-	height: 25px; 
-	width: 150px;
 }
 
 
