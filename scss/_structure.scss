@@ -1,0 +1,21 @@
+// Structure
+
+* {
+  box-sizing: border-box; 
+}
+
+
+img {
+  height: auto;
+  max-width: 100%; 
+}
+
+
+html {	
+	margin: 0 auto;
+	font-family: $font-stack;
+    font-size: $font-base;
+	color: $insta-grey;
+	min-width: 320px;
+	max-width: 1200px;
+}
