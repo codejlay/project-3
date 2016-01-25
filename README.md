@@ -1,5 +1,7 @@
 # Project 3 - Instagrid
 
+View deployed site through [GitHub Pages.](http://codejlay.github.io/project03-instagrid/)
+
 **Summary:**
 
 A one-page responsive website that allows a user to search for a hashtag via the Instagram API. Once the images are fetched, it is display nicely in a grid format.
